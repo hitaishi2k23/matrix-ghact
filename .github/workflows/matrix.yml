@@ -1,0 +1,13 @@
+name: matrix
+on: push
+jobs:
+    Node-version:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Node version
+                run: node -v
+            -   uses: actions/setup-node@v3
+                with:
+                    node-version: 18
+            -   name: after set-up node version
+                run: node -v
